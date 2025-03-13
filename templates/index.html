@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoBlog - Blog Generator Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <nav class="nav__container">
+        <div class="nav__logo">EchoBlog</div>
+        <ul class="nav__links">
+            <li><a href="#header"><i class="fas fa-home-lg-alt"></i></a></li>
+            <li><a href="#services"><i class="fas fa-tools"></i></a></li>
+            <li><a href="#about"><i class="fas fa-user-circle"></i></a></li>
+            <li><a href="#team"><i class="fas fa-users-cog"></i></a></li>
+            <li><a href="#testimonials"><i class="fas fa-thumbs-up"></i></a></li>
+            <li><a href="#contact"><i class="fas fa-envelope-open-text"></i></a></li>
+        </ul>
+    </nav>
+
+    <header id="header">
+        <br>
+        <br>
+        
+        <div class="animated-text">
+            <h1>Welcome to EchoBlog</h1>
+            <br>
+            <p>Echoing Creativity, One Blog at a Time!</p>
+        </div>
+        <a href="{{ url_for('login') }}" class="btn btn-danger btn-lg">Get Started</a>
+
+        <div class="hexagon-container">
+            <ul>
+                <li>
+                    <img src="{{ url_for('static', filename='img1.jpg') }}" alt="Image 1">
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='img2.jpg') }}" alt="Image 2">
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='img3.jpg') }}" alt="Image 3">
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='img4.jpg') }}" alt="Image 4">
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='img5.jpg') }}" alt="Image 5">
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='img6.jpg') }}" alt="Image 6">
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+<section class="section__container" id="services">
+    <br>
+    <br>
+    
+    <h2 class="section__header">Our Services</h2>
+    <div class="service__grid">
+        <div class="service__card">
+            <i class="fas fa-pencil-alt"></i>
+            <h3>Blog Writing</h3>
+            <p>Create engaging blogs with our easy-to-use tools.</p>
+            <a href="#" class="service__btn">Learn More</a>
+        </div>
+        <div class="service__card">
+            <i class="fas fa-volume-up"></i> 
+            <h3>Voice Integration</h3>
+            <p>Accelerate your writing process by using voice commands</p>
+            <a href="#" class="service__btn">Learn More</a>
+        </div>
+        <div class="service__card">
+            <i class="fas fa-lightbulb"></i> 
+            <h3>Topic Suggestions</h3>
+            <p>Get ideas and suggestions for your next blog topics.</p>
+            <a href="#" class="service__btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section__container" id="about">
+    <br><br>
+
+    <h2 class="section__header">About Us</h2>
+    
+    <div class="about__container">
+        <div class="about__row">
+            <div class="about__text-r">
+                <p class="typewriter">Request topics via text or voice..</p>
+            </div>
+            <div class="about__image about__image-r">
+                <img src="{{ url_for('static', filename='1.jpg') }}" alt="Image 1">
+            </div>
+        </div>
+        
+        <div class="about__row">
+            <div class="about__image about__image-l">
+                <img src="{{ url_for('static', filename='2.jpg') }}" alt="Image 2">
+            </div>
+            <div class="about__text-l">
+                <p class="typewriter">Explore topics through our suggestions.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="about__container">
+        <div class="about__row">
+            <div class="about__text-r">
+                <p class="typewriter">Blog created with an engaging title.</p>
+            </div>
+            <div class="about__image about__image-r">
+                <img src="{{ url_for('static', filename='3.jpg') }}" alt="Image 3">
+            </div>
+        </div>
+        
+        <div class="about__row">
+            <div class="about__image about__image-l">
+                <img src="{{ url_for('static', filename='4.jpg') }}" alt="Image 4">
+            </div>
+            <div class="about__text-l">
+                <p class="typewriter">Browse , download, optimize.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="section__container" id="team">
+        <br>
+        <br>
+        <br>
+        <h2 class="section__header">Meet Our Team</h2>
+        <div class="team__grid">
+            <div class="team__card">
+                <img src="https://via.placeholder.com/250" alt="Team Member">
+                <h4>John Doe</h4>
+                <p>Lead Writer</p>
+            </div>
+            <div class="team__card">
+                <img src="https://via.placeholder.com/250" alt="Team Member">
+                <h4>Jane Smith</h4>
+                <p>Editor</p>
+            </div>
+            <div class="team__card">
+                <img src="https://via.placeholder.com/250" alt="Team Member">
+                <h4>Mike Johnson</h4>
+                <p>Designer</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial__container" id="testimonials">
+        <br>
+        <br>
+        <br>
+        <h2 class="section__header">What Our Users Say</h2>
+        <div class="testimonial__grid">
+            <div class="testimonial__card">
+                <p>"This is the best blogging tool I've ever used!"</p>
+                <h5>- User A</h5>
+            </div>
+            <div class="testimonial__card">
+                <p>"Blogify has transformed the way I write."</p>
+                <h5>- User B</h5>
+            </div>
+            <div class="testimonial__card">
+                <p>"Highly recommend for anyone looking to start a blog."</p>
+                <h5>- User C</h5>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <br>
+        <br>
+        <h2 class="section__header">Contact Us</h2>
+        <div class="contact__container">
+            
+            <div class="contact__details">
+                
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="contact__image">
+                <img src="{{ url_for('static', filename='contact.jpg') }}" alt="Contact Image">
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer__container">
+        <p>&copy; 2024 Blogify. All rights reserved.</p>
+        <div class="footer__links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Help</a>
+        </div>
+        <div class="footer__socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

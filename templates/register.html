@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="content-left">
+            <h1>Welcome to EchoBlog</h1>
+            <p>Discover, create, and share your thoughts with the world. EchoBlog is your go-to platform for AI-generated blogs that resonate with your audience. Register to explore more!</p>
+        </div>
+        <div class="form-container">
+            <div class="form-box">
+                <div class="form-value">
+                    <form method="post">
+                        <h2>Register</h2>
+                        <div class="inputbox"> 
+                            <ion-icon name="mail-outline"></ion-icon> 
+                            <input type="email" name="username" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="inputbox"> 
+                            <ion-icon name="lock-closed-outline"></ion-icon> 
+                            <input type="password" name="password" required> 
+                            <label>Password</label> 
+                        </div>
+                        <div class="inputbox"> 
+                            <ion-icon name="lock-closed-outline"></ion-icon> 
+                            <input type="password" name="password" required> 
+                            <label>Confirm Password</label> 
+                        </div>
+                        <div class="forget"> 
+                            <label><input type="checkbox">Remember Me</label> 
+                            <a href="#">Forgot Password?</a> 
+                        </div>
+                        <button type="submit">Log In</button>
+                        <div class="login">
+                            <p>Don't have an account? <a href="{{ url_for('login') }}">Login</a></p>
+                        </div>
+                    </form>
+                    {% if error %}
+                    <p class="error">{{ error }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section> 
+</body>
+</html>
